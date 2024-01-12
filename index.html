@@ -3,12 +3,14 @@
   <title>HERO-ID: Step into the phone booth</title>
   <meta http-equiv="Cache-control" content="no-cache">
   <script>
-    let images = ['images/lilly-hammer.png','images/officer-morgan.png', 'images/handshake.png', 'images/murder-muse.png', 'images/power-jenny.png'];
+    let images = ['images/lilly-hammer.png','images/officer-morgan.png', 'images/handshake.png', 'images/murder-muse.png', 'images/enigma-tick.png', 'images/power-jenny.png'];
+    let iTitles = ['Lilly Hammer','Officer Morgan', 'Handshake', 'Murder Muse', 'Enigma Tick', 'Power Jenny'];
     let index = 0;
     const imgElement = document.querySelector('#charPhoto');
     function change() {
       document.getElementById("charPhoto").src = images[index];
-      index > 3 ? index = 0 : index++;
+      document.getElementById("charPhoto").title = iTitles[index];
+      index > 4 ? index = 0 : index++;
     }
 
     window.onload = function () {
@@ -31,7 +33,7 @@ A PRIVATE DOMAIN USED TO PROVIDE PERSONAL EMAIL ADDRESSES FOR FRIENDS AND FAMILY
     </tr>
     <tr>
       <td valign="Top" bgcolor="#0000ff">
-      <img id="charPhoto" src="images/power-jenny.png" />
+      <img id="charPhoto" src="images/power-jenny.png" title="Power Jenny" />
       </td>
     </tr>
     <tr>
